@@ -45,7 +45,7 @@ export const profile = {
 };
 
 export const personal = [
-  { label: "Idade", value: "29 anos" },
+  { label: "Idade", value: "30 anos" },
   { label: "Estado civil", value: "Solteira" },
   { label: "Filhos", value: "Sem filhos" },
   { label: "Naturalidade", value: "Juazeiro do Norte – CE" },

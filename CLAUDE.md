@@ -17,7 +17,7 @@ Currículo online (landing page corporativa) de **Werllyane Alcantara Fernandes*
 |---|---|
 | Nome | Werllyane Alcantara Fernandes |
 | Cargo exibido | Assistente Administrativo |
-| Idade / estado civil / filhos | 29 anos / Solteira / Sem filhos |
+| Idade / estado civil / filhos | 30 anos (atualizado de 29 a pedido do Charles) / Solteira / Sem filhos |
 | Naturalidade | Juazeiro do Norte – CE (não há endereço de residência; não escreva "mora em") |
 | WhatsApp / telefone | (88) 9.8141-7708 (`5588981417708`) |
 | E-mail | werllyane.alcantara@outlook.com |
