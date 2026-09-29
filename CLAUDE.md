@@ -4,7 +4,8 @@ Currículo online (landing page corporativa) de **Werllyane Alcantara Fernandes*
 
 - **Dono do projeto:** Charles. Converse com ele em português.
 - **Idioma do conteúdo:** português do Brasil (`<html lang="pt-BR">`).
-- **Site no ar / repositório:** *ainda não publicado* (sugestão de nome: `curriculo-werllyane`).
+- **Site no ar:** https://charles-silva-07.github.io/curriculo-werllyane/
+- **Repositório:** https://github.com/Charles-Silva-07/curriculo-werllyane (público, branch `main`)
 
 ---
 
@@ -88,4 +89,3 @@ A verificação usou **playwright-core** com o Chrome instalado (numa pasta temp
 
 ## Pendências
 - [ ] URL completa do LinkedIn → `contact.linkedinUrl` em `src/data.ts`.
-- [ ] Criar o repositório no GitHub, ativar o Pages (Source: GitHub Actions) e anotar aqui o link do site.
