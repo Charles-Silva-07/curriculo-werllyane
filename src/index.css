@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-navy antialiased;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  ::selection {
+    background: #d5e3ef;
+    color: #17233c;
+  }
+  :focus-visible {
+    outline: 2px solid #2f5d8c;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-xl px-5 text-[0.78rem] font-semibold uppercase tracking-[0.08em] transition-all duration-300 disabled:cursor-wait disabled:opacity-70 sm:px-6;
+  }
+  .btn-primary {
+    @apply btn bg-navy text-white shadow-[0_14px_30px_-14px_rgba(23,35,60,0.8)] hover:-translate-y-0.5 hover:bg-brand;
+  }
+  .btn-outline {
+    @apply btn border border-navy/15 bg-white text-navy hover:-translate-y-0.5 hover:border-brand hover:text-brand;
+  }
+  .btn-light {
+    @apply btn bg-white text-navy hover:-translate-y-0.5 hover:bg-gold-soft;
+  }
+  .btn-ghost-light {
+    @apply btn border border-white/25 text-white hover:-translate-y-0.5 hover:border-gold hover:text-gold;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#15803D] text-white shadow-[0_14px_30px_-14px_rgba(21,128,61,0.8)] hover:-translate-y-0.5 hover:bg-[#166534];
+  }
+  .card {
+    @apply rounded-2xl border border-sky-line/80 bg-white shadow-soft;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-brand;
+  }
+  .icon-box {
+    @apply grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-sky text-brand;
+  }
+  /* grade sutil, lembra papel de planilha/caderno — dá um ar corporativo */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(47, 93, 140, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(47, 93, 140, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .grid-bg-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+/* A folha do currículo (PDF / impressão) fica fora da tela no site */
+.resume-offscreen {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  pointer-events: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #fff !important;
+    margin: 0 !important;
+  }
+  .site {
+    display: none !important;
+  }
+  .resume-offscreen {
+    position: static !important;
+  }
+  #resume-sheet {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
