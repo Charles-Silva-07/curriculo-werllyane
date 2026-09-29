@@ -74,6 +74,7 @@ export function ResumeSheet() {
             <>
               <img src={asset(images.photo)} alt="" style={{ display: "none" }} onError={() => setHasPhoto(false)} />
               <div
+                data-pdf-photo
                 style={{
                   width: 172,
                   height: 206,

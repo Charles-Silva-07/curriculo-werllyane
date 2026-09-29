@@ -78,6 +78,7 @@ O visual é corporativo e sóbrio: grade sutil (`.grid-bg`) no lugar de ornament
 ## PDF e impressão
 - O `ResumeSheet` tem **794 × 1122 px (1 página A4)**. Depois de mudar o conteúdo, gere o PDF e confirme que ele continua com **1 página**.
 - As limitações do html2canvas são as mesmas do projeto da Josefa: a foto usa `background-image` (sem `object-fit`), as cores são hex e o posicionamento fora da tela fica no wrapper `.resume-offscreen`. No PDF baixado, os títulos ficam levemente deslocados na vertical; na impressão ficam perfeitos.
+- **Foto nítida no PDF:** o html2canvas deixa a foto borrada (ele rasteriza a folha em baixa resolução). Por isso, `useResume.ts` gera o PDF com `.toPdf().get("pdf")` e depois **redesenha a foto original em alta resolução** por cima (JPEG 0,92, com a mesma borda e os mesmos cantos do elemento `[data-pdf-photo]`) via `pdf.addImage`. O PDF fica com cerca de 850 KB. Não use PNG nessa camada: o arquivo sobe para 5,6 MB.
 - O e-mail passa por `breakableEmail()`, que só permite quebra de linha antes do "@".
 
 ## Verificação
